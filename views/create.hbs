@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="content">
+        <h1>{{title}}</h1>
+        <hr>
+        <form action="{{action}}" method="{{method}}">
+            <div class="form-group">
+                {{#if condition}}<input value="{{user._id}}" name="id" hidden> {{/if}}
+                <label class="col-sm-3">Ad</label>
+                <input class="col-sm-9 form-control" type="text" name="ad" placeholder="Adınızı Giriniz" {{#if condition}} value="{{user.ad}}"
+                    {{/if}} required autofocus>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3">Soyad</label>
+                <input class="col-sm-9 form-control" type="text" name="soyad" placeholder="Soyadınızı Giriniz" {{#if condition}} value="{{user.soyad}}"
+                    {{/if}} required autofocus>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3">Doğum Tarihi</label>
+                <input class="col-sm-9 form-control" type="date" name="dogumTarihi" {{#if condition}} value="{{user.dogumTarihi}}" {{/if}}
+                    required autofocus>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3">E-posta</label>
+                <input class="col-sm-9 form-control" type="email" name="email" {{#if condition}} value="{{user.email}}" {{/if}} required
+                    autofocus>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-9">
+                    <button class="btn btn-primary" type="submit">Kaydet</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
